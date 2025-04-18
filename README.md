@@ -27,10 +27,10 @@ Berikut langkah-langkah menjalankan aplikasi ini di lokal Anda:
 
 ```bash
 # 1. Clone Repository
-https://github.com/Guruhg19/GymGo-Gym-Membership-On-the-Go-Web-App-System.git
+https://github.com/Guruhg19/GymGo-Gym--Membership-On-the-Go-Web-App-System.git
 
 # 2. Masuk ke direktori project
-cd GymGo-Gym-Membership-On-the-Go-Web-App-System
+cd GymGo-Gym--Membership-On-the-Go-Web-App-System
 
 # 3. Install dependency
 composer install
