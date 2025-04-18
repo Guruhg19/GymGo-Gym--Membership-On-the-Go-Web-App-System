@@ -1,61 +1,64 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# GymGo: Gym Membership On-the-Go Web App System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-12-red?style=flat&logo=laravel)
+![Filament](https://img.shields.io/badge/Filament-v3-blueviolet?style=flat&logo=laravel)
+![MySQL](https://img.shields.io/badge/MySQL-Database-informational?style=flat&logo=mysql)
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tentang Proyek
+**GymGo** adalah sistem langganan gym berbasis web yang dibangun menggunakan Laravel 11, Filament PHP, dan pendekatan Service Repository Pattern. Aplikasi ini dirancang untuk memudahkan pengguna dalam mencari, memilih, dan melakukan pembayaran langganan gym secara online. 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Fitur Utama
+- 🚀 Membuat projek website langganan gym dari awal sampai selesai
+- 🧠 Membuat CMS dan super admin dengan cepat dan efisien menggunakan Laravel Filament
+- 🧩 Membangun struktur database berdasarkan desain ERD yang scalable
+- 🔍 Fitur pencarian tempat gym untuk memudahkan pengguna
+- 💳 Fitur berlangganan dan pembayaran paket gym yang terintegrasi
+- 💼 Membangun portfolio proyek nyata sebagai bekal mencari pekerjaan
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Tech Stack
+- Laravel 11
+- Filament v3
+- MySQL
+- PHP 8+
 
-## Learning Laravel
+## Cara Menjalankan Proyek
+Berikut langkah-langkah menjalankan aplikasi ini di lokal Anda:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+# 1. Clone Repository
+https://github.com/Guruhg19/GymGo-Gym-Membership-On-the-Go-Web-App-System.git
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# 2. Masuk ke direktori project
+cd GymGo-Gym-Membership-On-the-Go-Web-App-System
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# 3. Install dependency
+composer install
 
-## Laravel Sponsors
+# 4. Copy file .env dan atur konfigurasi database
+cp .env.example .env
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# 5. Generate APP_KEY
+php artisan key:generate
 
-### Premium Partners
+# 6. Setup database (buat database baru di MySQL dan sesuaikan di .env)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+# 7. Jalankan migrasi dan seeder (jika tersedia)
+php artisan migrate --seed
 
-## Contributing
+# 8. Jalankan server lokal
+php artisan serve
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# 9. Akses melalui browser
+http://localhost:8000
+```
 
-## Code of Conduct
+## Credits
+Proyek ini dikembangkan sebagai bagian dari kelas online yang disediakan oleh BuildWithAngga untuk meningkatkan keterampilan Full-Stack Web Development dengan Laravel 11 dan Filament PHP.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+**GymGo**: Modernisasi layanan gym dan kesehatan dengan teknologi.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
