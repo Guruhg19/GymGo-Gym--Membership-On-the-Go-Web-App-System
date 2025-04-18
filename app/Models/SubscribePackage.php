@@ -16,7 +16,7 @@ class SubscribePackage extends Model
         'price',
         'icon',
         'duration',
-        'gym_id'
+        // 'gym_id'
     ];
 
     public function gym(){

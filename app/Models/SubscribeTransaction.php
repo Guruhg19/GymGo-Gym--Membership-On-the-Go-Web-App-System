@@ -25,6 +25,20 @@ class SubscribeTransaction extends Model
         'subscribe_package_id'
     ];
 
+    public static function generateUniqueTrxId(){
+        $prefix = 'GYMGO';
+        do {
+            $randomString = $prefix . mt_rand(1000, 9999);
+        } while (self::where('booking_trx_id', $randomString)->exists());
+
+        return $randomString;
+    }
+
+    protected $casts = [
+        'started_at' => 'date',
+        'ended_at' => 'date'
+    ];
+
     public function subscribePackage(){
         return $this->belongsTo(SubscribePackage::class, 'subscribe_package_id');
     }

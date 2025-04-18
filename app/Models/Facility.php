@@ -14,7 +14,8 @@ class Facility extends Model
     protected $fillable = [
         'name',
         'thumbnail',
-        'is_open'
+        'is_open',
+        'about'
     ];
 
     public function gymFacilities(){
