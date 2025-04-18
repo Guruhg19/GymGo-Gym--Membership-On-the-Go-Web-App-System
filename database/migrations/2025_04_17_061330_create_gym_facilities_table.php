@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreign('gym_id')->references('id')->on('gyms')->onDelete('cascade');
 
             $table->uuid('facility_id');
-            $table->foreign('facility_id')->references('id')->on('fasilities')->onDelete('cascade');
+            $table->foreign('facility_id')->references('id')->on('facilities')->onDelete('cascade');
 
             $table->softDeletes();
             $table->timestamps();
