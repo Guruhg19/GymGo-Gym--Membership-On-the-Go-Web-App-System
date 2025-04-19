@@ -13,7 +13,7 @@ class SubscribeTransaction extends Model
 
     protected $fillable = [
         'name',
-        'photo',
+        'phone',
         'email',
         'booking_trx_id',
         'proof',
@@ -26,7 +26,7 @@ class SubscribeTransaction extends Model
     ];
 
     public static function generateUniqueTrxId(){
-        $prefix = 'GYMGO';
+        $prefix = 'GYMG';
         do {
             $randomString = $prefix . mt_rand(1000, 9999);
         } while (self::where('booking_trx_id', $randomString)->exists());
