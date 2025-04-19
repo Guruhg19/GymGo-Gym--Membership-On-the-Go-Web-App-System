@@ -6,12 +6,18 @@ use App\Filament\Resources\SubscribePackageResource\Pages;
 use App\Filament\Resources\SubscribePackageResource\RelationManagers;
 use App\Models\SubscribePackage;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Nette\Utils\ImageColor;
 
 class SubscribePackageResource extends Resource
 {
@@ -23,7 +29,30 @@ class SubscribePackageResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('name')
+                ->required()
+                ->maxLength(255),
+
+                FileUpload::make('icon')
+                ->image()
+                ->required(),
+
+                TextInput::make('price')
+                ->required()
+                ->numeric()
+                ->prefix('IDR'),
+
+                TextInput::make('duration')
+                ->required()
+                ->numeric()
+                ->prefix('Days'),
+
+                Repeater::make('subscribeBenefits')
+                ->relationship('subscribeBenefits')
+                ->schema([
+                    TextInput::make('name')
+                    ->required()
+                ])
             ]);
     }
 
@@ -31,13 +60,20 @@ class SubscribePackageResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name')
+                ->searchable(),
+
+                TextColumn::make('price')
+                ->money('IDR', true),
+
+                ImageColumn::make('icon')
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

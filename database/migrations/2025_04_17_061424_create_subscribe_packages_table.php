@@ -18,8 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('duration');
             $table->string('icon');
 
-            $table->uuid('gym_id');
-            $table->foreign('gym_id')->references('id')->on('gyms')->onDelete('cascade');
+            // $table->uuid('gym_id');
+            // $table->foreign('gym_id')->references('id')->on('gyms')->onDelete('cascade');
 
             $table->softDeletes();
             $table->timestamps();

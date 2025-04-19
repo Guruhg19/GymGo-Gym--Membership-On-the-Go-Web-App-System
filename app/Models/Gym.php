@@ -18,7 +18,7 @@ class Gym extends Model
         'thumbnail',
         'about',
         'open_time_at',
-        'close_time_at',
+        'closed_time_at',
         'is_popular',
         'address',
         'city_id'
@@ -41,9 +41,9 @@ class Gym extends Model
         return $this->hasMany(GymFacility::class);
     }
 
-    public function subscribePackages(){
-        return $this->hasMany(SubscribePackage::class);
-    }
+    // public function subscribePackages(){
+    //     return $this->hasMany(SubscribePackage::class);
+    // }
 
     public function gymPhotos(){
         return $this->hasMany(GymPhoto::class);

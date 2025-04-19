@@ -19,9 +19,9 @@ class SubscribePackage extends Model
         // 'gym_id'
     ];
 
-    public function gym(){
-        return $this->belongsTo(Gym::class,'gym_id');
-    }
+    // public function gym(){
+    //     return $this->belongsTo(Gym::class,'gym_id');
+    // }
 
     public function subscribeBenefits(){
         return $this->hasMany(SubscribeBenefit::class);
